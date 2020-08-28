@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_28_104154) do
+ActiveRecord::Schema.define(version: 2020_08_28_164828) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "foos", force: :cascade do |t|
-    t.string "foo"
-    t.string "bar"
+  create_table "quotes", force: :cascade do |t|
+    t.string "quote"
+    t.string "character"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["bar"], name: "index_foos_on_bar"
-    t.index ["foo"], name: "index_foos_on_foo"
+    t.index ["character"], name: "index_quotes_on_character"
+    t.index ["quote"], name: "index_quotes_on_quote"
   end
 
 end
