@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Company.destroy_all
 
-100.times do
+1000.times do
   Company.create(name: Faker::Company.name, catch_phrase: Faker::Company.catch_phrase, logo: Faker::Company.logo)
 end
