@@ -4,8 +4,14 @@ class CompaniesController < ApplicationController
     render 'index'
   end
 
-  alias :all :index
-  alias :next :index
+  def all
+    @companies = Company.all
+  end
+
+  def next
+    @companies = Company.page(params[:page])
+  end
+
   alias :more :index
   alias :endless :index
 end
