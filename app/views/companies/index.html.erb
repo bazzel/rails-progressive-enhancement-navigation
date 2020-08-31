@@ -1,7 +1,7 @@
 <ul class="shadow-xl rounded">
-  <% @quotes.each do |quote| %>
+  <% @companies.each do |company| %>
     <li class="px-5 py-4 bg-white border-t border-r border-b border-l border-gray-300 first:rounded-t last:rounded-b hover:shadow-xl">
-      <%= quote.quote %>
+      <%= company.name %>
     </li>
   <% end %>
 </ul>

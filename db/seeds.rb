@@ -5,8 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Quote.destroy_all
+Company.destroy_all
 
 100.times do
-  Quote.create(quote: Faker::Movies::BackToTheFuture.quote, character: Faker::Movies::BackToTheFuture.character)
+  Company.create(name: Faker::Company.name, catch_phrase: Faker::Company.catch_phrase, logo: Faker::Company.logo)
 end
