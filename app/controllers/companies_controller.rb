@@ -12,6 +12,9 @@ class CompaniesController < ApplicationController
     @companies = Company.page(params[:page])
   end
 
-  alias :more :index
+  def more
+    @companies = Company.page(params[:page])
+  end
+
   alias :endless :index
 end

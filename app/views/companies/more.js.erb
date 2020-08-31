@@ -1,0 +1,4 @@
+var htmlString = '<%= j render(template: 'companies/more', object: @companies, formats: [:html]) %>'
+
+var el = document.querySelector('.load-more');
+el.outerHTML = htmlString;
