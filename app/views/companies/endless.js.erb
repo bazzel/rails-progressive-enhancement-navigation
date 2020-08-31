@@ -1,0 +1,9 @@
+var htmlString = '<%= j render(template: 'companies/endless', object: @companies, formats: [:html]) %>'
+
+<%- if @companies.first_page? %>
+  var el = document.querySelector('.companies');
+  el.innerHTML = htmlString;
+<%- else %>
+  var el = document.querySelector('.load-more');
+  el.outerHTML = htmlString;
+<%- end %>

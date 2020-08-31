@@ -1,9 +1,4 @@
 class CompaniesController < ApplicationController
-  def index
-    @companies = Company.all
-    render 'index'
-  end
-
   def all
     @companies = Company.all
   end
@@ -16,5 +11,7 @@ class CompaniesController < ApplicationController
     @companies = Company.page(params[:page])
   end
 
-  alias :endless :index
+  def endless
+    @companies = Company.page(params[:page])
+  end
 end
