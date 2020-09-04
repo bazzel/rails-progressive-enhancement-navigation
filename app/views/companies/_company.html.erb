@@ -1,7 +1,7 @@
-<div class="px-5 py-4 bg-white border-t border-r border-b border-l border-gray-300 flex items-center first:rounded-t last:rounded-b hover:shadow-xl">
-  <%= image_tag company.logo, class: 'w-16 md:w-20 lg:w-32 mr-4 md:mr-8' %>
+<div class="item">
+  <%= image_tag company.logo, class: 'item-image' %>
   <div>
-    <strong class="text-gray-900"><%= company.name %></strong>
-    <span class="text-gray-600 block md:inline-block"><span class="hidden md:inline-block px-2">-</span><%= company.catch_phrase %></span>
+    <strong class="item-title"><%= company.name %></strong>
+    <span class="item-slogan"><span class="item-connector">-</span><%= company.catch_phrase %></span>
   </div>
 </div>

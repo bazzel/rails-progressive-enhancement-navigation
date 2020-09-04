@@ -1,13 +1,13 @@
-<header class="py-3 text-gray-700 body-font bg-white border-b border-gray-300">
-  <div class="container mx-auto flex flex-wrap flex-col md:flex-row items-center">
-    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-      <%= image_tag('/kabisa-logo.png', class: 'h-12') %>
+<header class="header">
+  <div class="header-container container">
+    <a class="header-home">
+      <%= image_tag('/kabisa-logo.png', class: 'header-image') %>
     </a>
-    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-      <%= link_to 'All', companies_path, class: 'mr-5 hover:text-gray-900' %>
-      <%= link_to 'Next', companies_path(type: 'next'), class: 'mr-5 hover:text-gray-900' %>
-      <%= link_to 'More', companies_path(type: 'more'), class: 'mr-5 hover:text-gray-900' %>
-      <%= link_to 'Endless', companies_path(type: 'endless'), class: 'mr-5 hover:text-gray-900' %>
+    <nav class="header-nav">
+      <%= link_to 'All', companies_path, class: 'header-nav-link' %>
+      <%= link_to 'Next', companies_path(type: 'next'), class: 'header-nav-link' %>
+      <%= link_to 'More', companies_path(type: 'more'), class: 'header-nav-link' %>
+      <%= link_to 'Endless', companies_path(type: 'endless'), class: 'header-nav-link' %>
     </nav>
   </div>
 </header>

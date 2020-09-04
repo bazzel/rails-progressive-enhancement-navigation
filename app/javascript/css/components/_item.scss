@@ -1,0 +1,44 @@
+.item {
+  @apply px-5 py-4 bg-white border-t border-r border-b border-l border-gray-300 flex items-center;
+  &:hover {
+    @apply shadow-xl;
+  }
+  &:first-child {
+    @apply rounded-t;
+  }
+  &:last-child {
+    @apply rounded-b;
+  }
+
+  &-connector {
+    @apply hidden px-2;
+
+    @screen md {
+      @apply inline-block;
+    }
+  }
+
+  &-image {
+    @apply w-16 mr-4;
+
+    @screen md {
+      @apply w-20 mr-8;
+    }
+
+    @screen lg {
+      @apply w-32;
+    }
+  }
+
+  &-title {
+    @apply text-gray-900;
+  }
+
+  &-slogan {
+    @apply text-gray-600 block;
+
+    @screen md {
+      @apply inline-block;
+    }
+  }
+}
