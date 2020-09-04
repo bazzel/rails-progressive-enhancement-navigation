@@ -4,7 +4,7 @@ module ApplicationHelper
     return unless resources.respond_to?(:next_page)
 
     options = {
-      class: 'load-more px-5 py-4 bg-white border-t border-r border-b border-l border-gray-300 flex items-center first:rounded-t last:rounded-b hover:shadow-xl',
+      class: 'load-more',
       data: {
         disable_with: 'Loading...'
       }
