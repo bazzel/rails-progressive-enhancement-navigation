@@ -1,17 +1,9 @@
 class CompaniesController < ApplicationController
-  def all
-    @companies = Company.all
-  end
-
-  def next
-    @companies = Company.page(params[:page])
-  end
-
-  def more
-    @companies = Company.page(params[:page])
-  end
-
-  def endless
-    @companies = Company.page(params[:page])
+  def index
+    unless params[:type]
+      @companies = Company.all
+    else
+      @companies = Company.page(params[:page])
+    end
   end
 end

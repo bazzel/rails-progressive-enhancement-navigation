@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-  get 'all', to: 'companies#all'
-  get 'next', to: 'companies#next'
-  get 'more', to: 'companies#more'
-  get 'endless', to: 'companies#endless'
+  get '/companies', to: 'companies#index'
 
-  root to: 'companies#all'
+  root to: 'companies#index'
 end
