@@ -1,15 +1,2 @@
-<%= search_form_for @q, class: 'search-form' do |f| %>
-  <%= hidden_field_tag :type, params[:type] %>
-  <%= f.search_field :name_or_catch_phrase_cont, autofocus: true, autocomplete: :off, placeholder: true, class: 'search-form-field' %>
-
-  <%= f.button class: 'search-form-submit', data: { disable_with: 'Searching...' } do %>
-    <div class="flex items-center">
-      <svg class="fill-current pointer-events-none h-5 -ml-3 mr-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-        <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
-      </svg>
-      <%= tag.span 'Search' %>
-    </div>
-  <% end %>
-<% end %>
-
+<%= render partial: 'search_form', locals: { q: @q } %>
 <%= render partial: 'results', object: @companies, layout: 'results_layout' %>

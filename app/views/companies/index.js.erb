@@ -1,7 +1,7 @@
 var htmlString = '<%= j render(partial: 'results', object: @companies) %>';
 
 <%- if @companies.first_page? %>
-  document.querySelector('.companies').innerHTML = htmlString;
+  document.querySelector('.items').innerHTML = htmlString;
 <%- else %>
   document.querySelector('.load-more').outerHTML = htmlString;
 <%- end %>
