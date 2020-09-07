@@ -1,0 +1,15 @@
+.button {
+  @apply text-base text-white  bg-blue-500 px-6 py-2 rounded shadow-lg transform translate-y-full transition duration-100 ease-in-out;
+
+  &:focus {
+    @apply outline-none;
+  }
+
+  &:hover {
+    @apply bg-blue-600 shadow-xl;
+  }
+
+  &:disabled {
+    @apply cursor-not-allowed bg-blue-400;
+  }
+}
