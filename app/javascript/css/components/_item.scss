@@ -1,5 +1,5 @@
 .item {
-  @apply px-5 py-4 bg-white border-t border-r border-b border-l border-gray-300 flex items-center;
+  @apply px-5 py-4 bg-white border-t border-r border-l border-gray-300 flex items-center;
   &:hover {
     @apply shadow-xl;
   }

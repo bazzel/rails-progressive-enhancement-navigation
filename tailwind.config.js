@@ -3,6 +3,11 @@ module.exports = {
   theme: {
     extend: {},
   },
-  variants: {borderRadius: ['first', 'last'], borderWidth: ['first', 'last']},
+  variants: {
+    borderRadius: ['first', 'last'],
+    borderWidth: ['first', 'last', 'focus'],
+    cursor: ['responsive', 'hover', 'focus', 'disabled'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'disabled']
+  },
   plugins: [],
 }

@@ -1,9 +1,7 @@
 class CompaniesController < ApplicationController
   def index
-    unless params[:type]
-      @companies = Company.all
-    else
-      @companies = Company.page(params[:page])
-    end
+    @q = Company.ransack(params[:q])
+    @companies = @q.result
+    @companies = @companies.page(params[:page]) if params[:type]
   end
 end
