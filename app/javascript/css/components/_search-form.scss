@@ -1,0 +1,26 @@
+.search-form {
+  @apply p-5 mb-16 bg-white border border-gray-300 shadow-md rounded-lg text-center;
+
+  &-field {
+    @apply text-lg px-4 py-3 bg-white appearance-none border border-gray-400 rounded w-full text-gray-700 transition duration-100 ease-in-out;
+    &:focus {
+      @apply outline-none border-blue-500 border-2;
+    }
+  }
+
+  &-submit {
+    @apply transform translate-y-full transition duration-100 ease-in-out bg-blue-500 text-white px-6 py-2 -mt-2 rounded-full shadow-lg;
+
+    &:focus {
+      @apply outline-none;
+    }
+
+    &:hover {
+      @apply bg-blue-600 shadow-xl;
+    }
+
+    &:disabled {
+      @apply cursor-not-allowed bg-blue-400;
+    }
+  }
+}
