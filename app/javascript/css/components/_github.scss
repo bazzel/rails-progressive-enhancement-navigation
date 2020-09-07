@@ -1,0 +1,14 @@
+.github {
+  right: 20px;
+  bottom: 20px;
+
+  @apply font-semibold text-white bg-gray-700 py-2 px-3 rounded-full shadow-lg fixed inline-flex items-center justify-center transition duration-200 ease-in-out;
+
+  &:hover {
+    @apply bg-gray-800 shadow-xl;
+  }
+
+  svg {
+    @apply w-6 flex-shrink mr-2;
+  }
+}

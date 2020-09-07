@@ -9,7 +9,7 @@
   }
 
   &-submit {
-    @apply transform translate-y-full transition duration-100 ease-in-out bg-blue-500 text-white px-6 py-2 -mt-2 rounded-full shadow-lg;
+    @apply bg-blue-500 text-white px-6 py-2 -mt-2 rounded-full shadow-lg transform translate-y-full transition duration-100 ease-in-out;
 
     &:focus {
       @apply outline-none;
