@@ -1,11 +1,13 @@
-<%= search_form q, live_search: params[:search] do |f| %>
-  <%= hidden_field_tag :type, params[:type] %>
-  <%= f.search_field :name_or_catch_phrase_cont, autofocus: true, placeholder: true, class: 'search-form-field', data: { target: 'search.query', action: 'input->search#perform' } %>
+<div class="search">
+  <%= search_form q, live_search: params[:search] do |f| %>
+    <%= hidden_field_tag :type, params[:type] %>
+    <%= f.search_field :name_or_catch_phrase_cont, autofocus: true, placeholder: true, class: 'search-field', data: { target: 'search.query', action: 'input->search#perform' } %>
 
-  <%= f.button class: 'search-form-submit', data: { disable_with: 'Searching...', target: 'search.submit' } do %>
-    <div class="flex items-center">
-      <%= render 'shared/search_icon' %>
-      <%= tag.span 'Search' %>
-    </div>
+    <%= f.button class: 'search-submit', data: { disable_with: 'Searching...', target: 'search.submit' } do %>
+      <div class="flex items-center">
+        <%= render 'shared/search_icon' %>
+        <%= tag.span 'Search' %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>
