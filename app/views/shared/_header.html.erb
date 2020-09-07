@@ -4,10 +4,10 @@
       <%= image_tag('/kabisa-logo.png', class: 'header-image') %>
     </a>
     <nav class="header-nav">
-      <%= link_to 'All', companies_path, class: 'header-nav-link' %>
-      <%= link_to 'Next', companies_path(type: 'next'), class: 'header-nav-link' %>
-      <%= link_to 'More', companies_path(type: 'more'), class: 'header-nav-link' %>
-      <%= link_to 'Endless', companies_path(type: 'endless'), class: 'header-nav-link' %>
+      <%= link_to 'Show All', companies_path, class: 'header-nav-link' %>
+      <%= link_to 'Show Next', companies_path(type: 'next'), class: 'header-nav-link' %>
+      <%= link_to 'Show More', companies_path(type: 'more'), class: 'header-nav-link' %>
+      <%= link_to 'Endless Scroll', companies_path(type: 'endless'), class: 'header-nav-link' %>
       <%= link_to 'Live search', companies_path(type: 'endless', search: 'search'), class: 'header-nav-link' %>
     </nav>
   </div>

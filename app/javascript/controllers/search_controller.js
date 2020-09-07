@@ -6,8 +6,10 @@ export default class extends Controller {
   static targets = ["form", "query", "submit"];
 
   initialize() {
-    this.submitTarget.remove();
+    if (this.hasSubmitTarget)
+      this.submitTarget.remove();
   }
+
   connect() {
     this.perform = _.debounce(this._perform, 500).bind(this);
   }

@@ -1,4 +1,4 @@
-<%= search_form_for q, url: url_for, remote: true, class: 'search-form', html: { autocomplete: :off, data: { controller: 'search', target: 'search.form' } } do |f| %>
+<%= search_form q, live_search: params[:search] do |f| %>
   <%= hidden_field_tag :type, params[:type] %>
   <%= f.search_field :name_or_catch_phrase_cont, autofocus: true, placeholder: true, class: 'search-form-field', data: { target: 'search.query', action: 'input->search#perform' } %>
 

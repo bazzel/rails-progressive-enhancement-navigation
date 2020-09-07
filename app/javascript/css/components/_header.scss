@@ -22,7 +22,7 @@
   }
 
   &-nav {
-    @apply flex flex-wrap items-center text-base justify-center;
+    @apply flex flex-wrap items-center text-base text-gray-500 justify-center;
 
     @screen md {
       @apply ml-auto;
