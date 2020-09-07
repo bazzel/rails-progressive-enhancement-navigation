@@ -1,6 +1,6 @@
 module ApplicationHelper
   def link_to_load_more(resources, type)
-    return if type.nil?
+    return if type.blank?
     return unless resources.respond_to?(:next_page)
 
     options = {
