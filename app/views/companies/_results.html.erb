@@ -1,2 +1,6 @@
-<%= render partial: 'company', collection: results %>
-<%= link_to_load_more results, type: params[:type] %>
+<% if results.any? %>
+  <%= render partial: 'company', collection: results %>
+  <%= link_to_load_more results, type: params[:type] %>
+<% else %>
+  <%= render 'no_results' %>
+<% end %>

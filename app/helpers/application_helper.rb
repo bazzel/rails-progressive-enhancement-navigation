@@ -18,7 +18,6 @@ module ApplicationHelper
 
   def search_form(record, live_search:)
     options = {
-      url: url_for,
       class: 'search-form',
       html: { autocomplete: :off }
     }

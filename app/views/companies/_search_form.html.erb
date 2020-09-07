@@ -1,6 +1,7 @@
 <div class="search">
-  <%= search_form q, live_search: params[:search] do |f| %>
+  <%= search_form q, live_search: params[:search].present? do |f| %>
     <%= hidden_field_tag :type, params[:type] %>
+    <%= hidden_field_tag :search, params[:search] %>
     <%= f.search_field :name_or_catch_phrase_cont, autofocus: true, placeholder: true, class: 'search-field', data: { target: 'search.query', action: 'input->search#perform' } %>
 
     <%= f.button class: 'search-submit', data: { disable_with: 'Searching...', target: 'search.submit' } do %>
