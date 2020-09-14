@@ -22,9 +22,7 @@ export default class extends Controller {
 
   processIntersectionEntries(entries) {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        this.loadMore();
-      }
+      if (entry.isIntersecting) this.loadMore();
     });
   }
 
