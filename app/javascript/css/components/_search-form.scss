@@ -1,5 +1,5 @@
 .search {
-  @apply sticky top-0 bg-gradient-to-b from-gray-100 via-gray-100 to-transparent pt-5 pb-24 -mx-4 px-4;
+  @apply pt-5 pb-16;
 
   &-form {
     @apply p-5 bg-white border border-gray-300 shadow-md rounded-lg text-center;

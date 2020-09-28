@@ -2,6 +2,9 @@
   <%= image_tag company.logo, class: 'item-image' %>
   <div>
     <strong class="item-title"><%= company.name %></strong>
-    <span class="item-slogan"><span class="item-connector">-</span><%= company.catch_phrase %></span>
+    <span class="item-slogan">
+      <span class="item-connector">-</span>
+      <%= company.catch_phrase %>
+    </span>
   </div>
 </div>
