@@ -26,7 +26,7 @@ module ApplicationHelper
       options[:remote] = true
       options[:html][:data] = {
         controller: 'search',
-        target: 'search.form'
+        search_target: 'form'
       }
     end
 
