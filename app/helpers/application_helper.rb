@@ -19,7 +19,8 @@ module ApplicationHelper
   def search_form(record, live_search:)
     options = {
       class: 'search-form',
-      html: { autocomplete: :off }
+      html: { autocomplete: :off },
+      data: { turbo_frame: 'results' }
     }
 
     if live_search
