@@ -1,0 +1,16 @@
+.pagination {
+  @apply flex justify-end;
+  @apply py-2;
+}
+
+.pagination > span {
+  @apply px-4 py-2 flex items-center;
+  @apply text-gray-500 text-sm;
+
+  &.current {
+    @apply border border-gray-300;
+    @apply bg-white;
+    @apply text-gray-900;
+    @apply shadow-sm;
+  }
+}

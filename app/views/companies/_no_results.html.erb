@@ -1,4 +1,4 @@
 <div class="text-center">
   <p class="text-base text-gray-600 mb-8">No results found.</p>
-  <%= link_to 'Clear filter', request.params.slice(:type, :search), class: 'button' %>
+  <%= link_to 'Clear filter', url_for, class: 'button', data: { turbo_frame: '_top' } %>
 </div>

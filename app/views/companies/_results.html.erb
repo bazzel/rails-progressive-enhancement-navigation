@@ -1,6 +1,5 @@
 <% if results.any? %>
   <%= render results %>
-  <%= link_to_load_more results, type: params[:type] %>
 <% else %>
   <%= render 'no_results' %>
 <% end %>

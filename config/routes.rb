@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  get '/companies', to: 'companies#index'
+  examples = %w[uno due tre quattro cinque sei]
+  namespace 'companies' do
+    examples.each do |action|
+      get action
+    end
+  end
 
-  root to: 'companies#index'
+  root "companies##{examples.first}"
 end
