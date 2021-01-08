@@ -2,7 +2,7 @@ import _ from "lodash";
 import { Controller } from "stimulus";
 
 export default class extends Controller {
-  static targets = ["form", "query", "submit"];
+  static targets = ["form", "submit"];
 
   initialize() {
     if (this.hasSubmitTarget) this.submitTarget.remove();

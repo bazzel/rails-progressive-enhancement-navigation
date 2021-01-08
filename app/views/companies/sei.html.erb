@@ -4,27 +4,28 @@
 
     <%= f.button class: 'search-submit button', data: { disable_with: 'Searching...', search_target: 'submit' } do %>
       <div class="flex items-center">
-        <%= render 'shared/search_icon' %>
-        <%= tag.span 'Search' %>
+        <%= render 'shared/search_icon' %><span>Search</span>
       </div>
     <% end %>
   <% end %>
 </div>
 
-<%= turbo_frame_tag 'results', class: 'items' do %>
-  <% if @companies.any? %>
-    <%= turbo_frame_tag "results-#{@companies.current_page}" do %>
-      <%= render @companies %>
-      <% if @companies.next_page %>
-        <%= turbo_frame_tag "results-#{@companies.next_page}" do %>
-          <%= link_to_next_page @companies, 'Load More', class: 'load-more', data: { disable_with: 'Loading...', controller: 'infinite-scroll' } %>
+<%= turbo_frame_tag 'results' do %>
+  <div class="items">
+    <% if @companies.any? %>
+      <%= turbo_frame_tag "results-#{@companies.current_page}" do %>
+        <%= render @companies %>
+        <% if @companies.next_page %>
+          <%= turbo_frame_tag "results-#{@companies.next_page}" do %>
+            <%= link_to_next_page @companies, 'Load More', class: 'load-more', data: { disable_with: 'Loading...', controller: 'infinite-scroll' } %>
+          <% end %>
         <% end %>
       <% end %>
+    <% else %>
+      <div class="text-center">
+        <p class="text-base text-gray-600 mb-8">No results found.</p>
+        <%= link_to 'Clear filter', url_for, class: 'button', data: { turbo_frame: '_top' } %>
+      </div>
     <% end %>
-  <% else %>
-    <div class="text-center">
-      <p class="text-base text-gray-600 mb-8">No results found.</p>
-      <%= link_to 'Clear filter', url_for, class: 'button', data: { turbo_frame: '_top' } %>
-    </div>
-  <% end %>
+  </div>
 <% end %>
