@@ -2,7 +2,7 @@
   @apply text-base text-black bg-white;
   @apply px-6 py-2;
   @apply rounded shadow-lg;
-  @apply transform translate-y-full transition duration-100 ease-in-out;
+  @apply transition duration-100 ease-in-out;
 
   &:focus {
     @apply outline-none;
@@ -22,6 +22,15 @@
     }
     &:disabled {
       @apply bg-blue-400;
+    }
+  }
+  &.btn-secondary {
+    @apply text-white bg-gray-600;
+    &:hover {
+      @apply bg-gray-700;
+    }
+    &:disabled {
+      @apply bg-gray-400;
     }
   }
 }

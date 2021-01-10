@@ -188,6 +188,8 @@ GEM
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2020.6)
       tzinfo (>= 1.0.0)
+    view_component (2.24.0)
+      activesupport (>= 5.0.0, < 7.0)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -229,6 +231,7 @@ DEPENDENCIES
   sqlite3 (~> 1.4)
   turbo-rails
   tzinfo-data
+  view_component
   web-console (>= 3.3.0)
   webpacker (~> 5.0)
 

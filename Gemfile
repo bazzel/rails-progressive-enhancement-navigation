@@ -25,6 +25,7 @@ gem 'faker'
 gem 'kaminari'
 gem 'ransack'
 gem 'turbo-rails'
+gem 'view_component', require: 'view_component/engine'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

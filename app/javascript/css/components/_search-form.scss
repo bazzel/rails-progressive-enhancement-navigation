@@ -14,5 +14,6 @@
 
   &-submit {
     @apply -mt-2 rounded-full;
+    @apply transform translate-y-full;
   }
 }
