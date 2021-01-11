@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :set_companies
-  before_action :scope_companies, expect: %i[uno due]
+  before_action :scope_companies, except: %i[uno due]
 
   private
 

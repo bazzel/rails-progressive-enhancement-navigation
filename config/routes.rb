@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'examples/:example', to: 'examples#show', as: 'examples'
+
   root "companies##{examples.first}"
 end

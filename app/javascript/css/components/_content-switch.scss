@@ -1,0 +1,25 @@
+.content-switch {
+  @apply flex justify-end my-4 text-sm;
+  li {
+    @apply mr-3;
+    &:last-child {
+      @apply mr-0;
+    }
+    a {
+      @apply py-1 px-3 inline-block border rounded-full font-light transition duration-200 ease-in-out;
+
+      &.active {
+        @apply text-white border-gray-600 bg-gray-700;
+        &:hover {
+          @apply bg-gray-600;
+        }
+      }
+      &:not(.active) {
+        @apply border-gray-400 bg-gray-200;
+        &:hover {
+          @apply bg-gray-300;
+        }
+      }
+    }
+  }
+}

@@ -67,6 +67,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
+    coderay (1.1.3)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
     erubi (1.10.0)
@@ -217,6 +218,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
+  coderay
   faker
   jbuilder (~> 2.7)
   kaminari
