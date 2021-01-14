@@ -1,0 +1,4 @@
+<%= turbo_frame_tag "content" do %>
+  <%= render CodeSnippetComponent.new(sample_file: 'uno/companies_controller.rb') %>
+  <%= render CodeSnippetComponent.new(sample_file: 'uno/index.html.erb') %>
+<% end %>

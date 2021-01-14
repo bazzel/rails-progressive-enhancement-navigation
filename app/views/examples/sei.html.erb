@@ -1,0 +1,6 @@
+<%= turbo_frame_tag "content" do %>
+  <%= render CodeSnippetComponent.new(sample_file: 'sei/companies_controller.rb') %>
+  <%= render CodeSnippetComponent.new(sample_file: 'sei/index.html.erb') %>
+  <%= render CodeSnippetComponent.new(sample_file: 'sei/infinite_scroll_controller.js') %>
+  <%= render CodeSnippetComponent.new(sample_file: 'sei/search_controller.js') %>
+<% end %>

@@ -1,0 +1,11 @@
+<%= search_form_for @q do |f| %>
+  <%= f.search_field :name_or_catch_phrase_cont %>
+  <%= f.submit %>
+<% end %>
+
+<% if @companies.any? %>
+  <%= render @companies %>
+<% else %>
+  <p>No results found.</p>
+  <%= link_to 'Clear filter', url_for %>
+<% end %>

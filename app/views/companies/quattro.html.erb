@@ -1,31 +1,43 @@
-<div class="search">
-  <%= search_form_for @q, url: url_for, class: 'search-form', data: { turbo_frame: 'results' } do |f| %>
-    <%= f.search_field :name_or_catch_phrase_cont, autofocus: true, placeholder: true, class: 'search-field' %>
-
-    <%= f.button class: 'search-submit btn btn-primary', data: { disable_with: 'Searching...' } do %>
-      <div class="flex items-center">
-        <%= render 'shared/search_icon' %><span>Search</span>
-      </div>
-    <% end %>
+<%= render ContentSwitchComponent.new do |c| %>
+  <%= c.link_to 'Example', companies_quattro_path, active: true %>
+  <%= c.link_to examples_path(example: 'quattro') do %>
+    <%# From https://heroicons.com/ %>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="20" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+    </svg>
   <% end %>
-</div>
+<% end %>
 
-<%= turbo_frame_tag 'results' do %>
-  <div class="items">
-    <% if @companies.any? %>
-      <%= turbo_frame_tag "results-#{@companies.current_page}" do %>
-        <%= render @companies %>
-        <% if @companies.next_page %>
-          <%= turbo_frame_tag "results-#{@companies.next_page}" do %>
-            <%= link_to_next_page @companies, 'Load More', class: 'load-more', data: { disable_with: 'Loading...' } %>
-          <% end %>
-        <% end %>
+<%= turbo_frame_tag "content" do %>
+  <div class="search">
+    <%= search_form_for @q, url: url_for, class: 'search-form', data: { turbo_frame: 'results' } do |f| %>
+      <%= f.search_field :name_or_catch_phrase_cont, autofocus: true, placeholder: true, class: 'search-field' %>
+
+      <%= f.button class: 'search-submit btn btn-primary', data: { disable_with: 'Searching...' } do %>
+        <div class="flex items-center">
+          <%= render 'shared/search_icon' %><span>Search</span>
+        </div>
       <% end %>
-    <% else %>
-      <div class="text-center">
-        <p class="text-base text-gray-600 mb-8">No results found.</p>
-        <%= link_to 'Clear filter', url_for, class: 'button', data: { turbo_frame: '_top' } %>
-      </div>
     <% end %>
   </div>
+
+  <%= turbo_frame_tag 'results' do %>
+    <div class="items">
+      <% if @companies.any? %>
+        <%= turbo_frame_tag "results-#{@companies.current_page}" do %>
+          <%= render @companies %>
+          <% if @companies.next_page %>
+            <%= turbo_frame_tag "results-#{@companies.next_page}" do %>
+              <%= link_to_next_page @companies, 'Load More', class: 'load-more', data: { disable_with: 'Loading...' } %>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% else %>
+        <div class="text-center">
+          <p class="text-base text-gray-600 mb-8">No results found.</p>
+          <%= link_to 'Clear filter', url_for, class: 'btn btn-primary', data: { turbo_frame: '_top' } %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
 <% end %>

@@ -1,3 +1,5 @@
 class ExamplesController < ApplicationController
-  def show; end
+  def show
+    render template: "examples/#{params[:example]}"
+  end
 end
