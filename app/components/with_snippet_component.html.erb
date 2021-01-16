@@ -1,0 +1,11 @@
+<%= render ContentSwitchComponent.new do |c| %>
+  <%= c.link_to 'Example', example_path(id), active: true %>
+  <%= c.link_to snippet_path(id) do %>
+    <%# From https://heroicons.com/ %>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="20" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+    </svg>
+  <% end %>
+<% end %>
+
+<%= helpers.turbo_frame_tag("content") { content } %>

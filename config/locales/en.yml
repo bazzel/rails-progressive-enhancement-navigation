@@ -1,4 +1,11 @@
 en:
+  examples:
+    1: "Show All"
+    2: "Show All (Turbo)"
+    3: "Show Next"
+    4: "Show More"
+    5: "Endless Scroll"
+    6: "Live search"
   helpers:
     placeholder:
       q:
