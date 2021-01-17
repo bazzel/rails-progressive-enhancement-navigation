@@ -14,10 +14,6 @@ class CodeSnippetComponent < ViewComponent::Base
   end
 
   def snippet
-    CodeRay.highlight_file(root.join(sample_file), line_numbers: :table).html_safe
-  end
-
-  def root
-    Rails.root.join('docs/snippets')
+    CodeRay.highlight_file(sample_file, line_numbers: :table).html_safe
   end
 end

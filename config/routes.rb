@@ -1,12 +1,5 @@
 Rails.application.routes.draw do
-  examples = %w[uno due tre quattro cinque sei]
-  namespace 'companies' do
-    examples.each do |action|
-      get action
-    end
-  end
-
-  get 'examples/:example', to: 'examples#show', as: 'examples'
-
-  root "companies##{examples.first}"
+  get 'companies/:id', to: 'companies#show', as: 'example'
+  get '/', to: redirect('/companies/1')
+  get 'snippets/:id', to: 'snippets#show', as: 'snippet'
 end
