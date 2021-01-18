@@ -123,6 +123,11 @@ GEM
       racc (~> 1.4)
     nokogiri (1.11.1-x86-mingw32)
       racc (~> 1.4)
+    octicons (11.2.0)
+      nokogiri (>= 1.6.3.1)
+    octicons_helper (11.2.0)
+      octicons (= 11.2.0)
+      rails
     pg (1.2.3)
     puma (4.3.7)
       nio4r (~> 2.0)
@@ -225,6 +230,7 @@ DEPENDENCIES
   jbuilder (~> 2.7)
   kaminari
   listen
+  octicons_helper
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
   rails (~> 6.1.0)

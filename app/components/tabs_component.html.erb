@@ -1,0 +1,11 @@
+<%= tag.div(class: component_class, data: { controller: 'tabs', tabs_active_class: 'active' }) do %>
+  <ul role="tablist">
+    <% items.each do |item| %>
+      <%= render Tabs::LinkComponent.new(item) %>
+    <% end %>
+  </ul>
+
+  <% items.each do |item| %>
+    <%= item %>
+  <% end %>
+<% end %>

@@ -1,0 +1,3 @@
+<li role="presentation">
+  <%= link_to item.title, "#", id: item.tab_id, class: component_class, role: :tab, data: { tabs_target: 'tab', action: "click->tabs#activate" }, aria: { controls: item.pane_id, selected: item.active? } %>
+</li>

@@ -1,0 +1,13 @@
+<%= render TabsComponent.new(class: 'diff') do |t| %>
+  <% history.each do |code_snippet| %>
+    <% if active_tab %>
+      <% title = t(code_snippet.id, scope: 'examples') %>
+
+      <%= t.item(title, active: code_snippet == active_tab, disabled: !code_snippet.diff?) do %>
+        <% if code_snippet.diff? %>
+          <div class="text-xs md:text-sm p-3 overflow-auto scrolling-touch"><%= code_snippet.diff %></div>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

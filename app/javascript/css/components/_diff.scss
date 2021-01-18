@@ -1,0 +1,10 @@
+.nav {
+  &.diff {
+    @apply mt-4;
+    > ul {
+      @apply pl-4;
+    }
+  }
+  > .tab-pane {
+  }
+}

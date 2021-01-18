@@ -1,0 +1,19 @@
+<div class="code-snippet-and-diff" data-controller="code-snippet-and-diff" data-code-snippet-and-diff-active-class="active">
+  <div class="code-snippet-and-diff-header">
+    <div class="code-snippet-and-diff-title"><%= code_snippet.name %></div>
+    <% if diff? || true %>
+      <%= render ToggleComponent.new do |t| %>
+        <%= t.item octicon('file-code'), active: true, disabled: !diff?, data: { controls: 'code', action: 'click->code-snippet-and-diff#activate' } %>
+        <%= t.item octicon('file-diff'), disabled: !diff?, data: { controls: 'diff', action: 'click->code-snippet-and-diff#activate' } %>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="code-snippet-and-diff-pane active" data-code-snippet-and-diff-target="pane" data-labelledby="code">
+    <%= render CodeSnippetComponent.new(code_snippet) %>
+  </div>
+
+  <div class="code-snippet-and-diff-pane" data-code-snippet-and-diff-target="pane" data-labelledby="diff">
+    <%= render DiffComponent.new(code_snippet) %>
+  </div>
+</div>

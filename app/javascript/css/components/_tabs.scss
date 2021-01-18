@@ -1,0 +1,132 @@
+// https://play.tailwindcss.com/eTReG9V4Gd?layout=horizontal
+.nav {
+  > ul {
+    @apply flex;
+    > li {
+      a {
+        @apply py-2 px-4 inline-block;
+        @apply no-underline;
+        &:not(.disabled) {
+          @apply text-blue-600;
+        }
+
+        &:hover {
+          @apply text-blue-800;
+        }
+
+        &.disabled {
+          @apply pointer-events-none cursor-default text-gray-500;
+        }
+        svg {
+          fill: currentColor;
+        }
+      }
+    }
+  }
+  > .tab-pane {
+    @apply hidden overflow-auto flex-grow;
+
+    &.active {
+      @apply block;
+    }
+  }
+
+  &.nav-right {
+    @apply flex flex-row-reverse;
+    > ul {
+      @apply flex-col;
+    }
+  }
+
+  &.nav-bottom {
+    @apply flex flex-col-reverse;
+  }
+
+  &.nav-left {
+    @apply flex;
+    > ul {
+      @apply flex-col;
+    }
+  }
+
+  &.nav-tabs {
+    > ul {
+      @apply border-gray-300;
+      > li {
+        a {
+          @apply block border-transparent;
+
+          &:hover {
+            @apply border-gray-300;
+          }
+
+          &.active {
+            @apply bg-white text-black pointer-events-none;
+            @apply border-gray-300;
+          }
+        }
+      }
+    }
+
+    > .tab-pane {
+      //@apply border-l border-b border-r;
+    }
+    &.nav-top {
+      > ul {
+        @apply border-b;
+        > li {
+          a {
+            @apply -mb-px border-l border-t border-r rounded-t;
+          }
+        }
+      }
+    }
+
+    &.nav-right {
+      > ul {
+        @apply border-l;
+        > li {
+          a {
+            @apply -ml-px border-b border-t border-r rounded-r;
+          }
+        }
+      }
+    }
+
+    &.nav-bottom {
+      > ul {
+        @apply border-t;
+        > li {
+          a {
+            @apply -mt-px border-l border-b border-r rounded-b;
+          }
+        }
+      }
+    }
+
+    &.nav-left {
+      > ul {
+        @apply border-r;
+        > li {
+          a {
+            @apply -mr-px border-l border-t border-b rounded-l;
+          }
+        }
+      }
+    }
+  }
+
+  &.nav-pills {
+    > ul {
+      > li {
+        a {
+          @apply rounded;
+
+          &.active {
+            @apply text-white bg-blue-500;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.toggle {
+  @apply relative inline-flex border-gray-400 bg-gray-200 border rounded-full shadow-inner;
+
+  input[type="radio"] {
+    @apply absolute pointer-events-none;
+    clip: rect(0, 0, 0, 0);
+    + label {
+      @apply z-10 px-4 py-2 cursor-pointer border-transparent font-light border;
+    }
+    &:checked + label {
+      @apply bg-white font-medium rounded-full border-gray-400 shadow-xs;
+    }
+    &:disabled + label {
+      @apply opacity-25 pointer-events-none;
+    }
+  }
+}
