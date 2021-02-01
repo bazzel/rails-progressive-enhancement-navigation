@@ -13,7 +13,8 @@ class CodeSnippetsAndDiffsComponent < ViewComponent::Base
 
   def files
     Rails.root.join(SNIPPETS_ROOT, id).each_child.reject do |f|
-      f.directory? || f.basename.to_s.start_with?('_')
+      # f.directory? || f.basename.to_s.start_with?('_') || f.basename.to_s == 'README.md'
+      f.directory? || f.basename.to_s == 'README.md'
     end
   end
 
