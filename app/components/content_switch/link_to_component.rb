@@ -19,8 +19,6 @@ module ContentSwitch
         @name = content
       end
 
-      @active = html_options.delete(:active)
-
       set_class_names
       set_data_attributes
     end
@@ -47,7 +45,7 @@ module ContentSwitch
     end
 
     def active?
-      !!@active
+      current_page?(options)
     end
   end
 end

@@ -31,8 +31,12 @@
     &-link {
       @apply mr-5;
 
+      &.active {
+        @apply text-gray-900 pointer-events-none;
+      }
+
       &:hover {
-        @apply text-gray-900;
+        @apply text-gray-700;
       }
     }
   }

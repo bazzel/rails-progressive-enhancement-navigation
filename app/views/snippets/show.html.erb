@@ -1,4 +1,4 @@
-<%= turbo_frame_tag "content" do %>
+<%= with_snippet do %>
   <%= render ReadmeComponent.new(id: params[:id]) %>
   <%= render CodeSnippetsAndDiffsComponent.new(id: params[:id]) %>
 <% end %>

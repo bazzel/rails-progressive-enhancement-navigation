@@ -3,9 +3,11 @@ module ApplicationHelper
 
   def nav_items
     safe_join(EXAMPLES_COUNT.times.map do |i|
-      link_to t(i.next, scope: 'examples'),
-              example_path(i.next),
-              class: 'header-nav-link'
+      url = snippet_path(i.next)
+      class_names = ['header-nav-link']
+      class_names << 'active' if current_page?(url)
+
+      link_to t(i.next, scope: 'examples'), url, class: class_names
     end)
   end
 
