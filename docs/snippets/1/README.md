@@ -23,6 +23,9 @@ To get started, follow these steps. We assume you have a development environment
 * Copy the content of `index.html.erb` and `companies_controller.rb` shown below to `app/views/companies/index.html.erb` and `app/controllers/companies_controller.rb` in your project.
 * Create the partial `app/views/companies/_company.html.erb` and paste the code from `_company.html.erb` listed below.
     
-* Start your Rails server and open the application:
+* Start your Rails server and navigate to [http://localhost:3000/companies](https://hotwire.dev/):
         
         $ bin/rails s
+        
+If all goes well you should see a page with 1,000 companies.  
+Not very interesting, but you're ready to improve you code using [Hotwire](https://hotwire.dev/). And, believe it or not: this was the hardest part.
